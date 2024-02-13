@@ -2,7 +2,6 @@ baseURL = "https://www.mattstatham.dev/"
 languageCode = "en-us"
 title = "Software Engineering Topics"
 theme = "m10c"
-
 paginate = 8
 
 [menu]
@@ -24,7 +23,8 @@ paginate = 8
 
 [params]
   author = "Matt Statham"
-  description = "Tutorials and thoughts as they come up. Almost a personal notebook."
+  avatar = "avatarduck.png"
+  description = "Tutorials and thoughts as they come up. Basically a personal notebook."
   menu_item_separator = " - "
   [[params.social]]
     icon = "github"
