@@ -20,6 +20,11 @@ paginate = 8
     name = "About"
     url = "/about/"
     weight = 3
+  [[menu.main]]
+    identifier = "commands"
+    name = "Command Quick Reference"
+    url = "/commands/"
+    weight = 3
 
 [params]
   author = "Matt Statham"
