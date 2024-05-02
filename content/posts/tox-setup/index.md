@@ -30,7 +30,26 @@ Enable Pytest when prompted. Our project is just called example.
 
 This sort of takes the fun out of things because it already provides us with a tox.ini file. Let's take a look at it:
 
-![Image alt](toxini.png)
+```ini {class="my-class" id="my-codeblock" lineNos=inline tabWidth=2}
+[tox]
+envlist = py38, py310, flake8
+
+[testenv:flake8]
+basepython = python
+deps = flake8
+commands = flake8 example tests
+
+[testenv]
+deps =
+    -r{toxinidir}/requirements_dev.txt
+; If you want to make tox run the tests with the same versions, create a
+; requirements.txt with the pinned versions and uncomment the following line:
+;     -r{toxinidir}/requirements.txt
+commands =
+    pip install -U pip
+    pytest --basetemp={envtmpdir}
+```
+
 
 Just to note, the original included a section on travis CI which i removed as well as a couple of versions of python that we weren't testing with. 
 
